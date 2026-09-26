@@ -1,0 +1,113 @@
+/* === Базовый сброс === */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    min-height: 100dvh; /* Высота с учетом панелей мобильного браузера */
+    display: grid;
+    place-items: center;
+    background-color: aliceblue;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #1c1c21;
+    line-height: 1.5;
+    padding: 1.25rem; /* 20px -> rem */
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Утилитарный класс для скрытия заголовков секций визуально, но оставления их для скринридеров */
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* === Карточка === */
+  .card {
+    max-width: 65rem; /* 350px -> rem (резина) */
+    width: 100%;
+    background-color: white;
+    padding: 1.25rem; /* 20px -> rem */
+    text-align: center;
+  }
+  
+  .card__logo {
+    width: 3.125rem; /* 50px -> rem */
+    height: 3.125rem;
+    margin-inline: auto; /* Центрирование */
+    margin-bottom: 1rem;
+  }
+  
+  .card__title {
+    margin: 0 0 1rem;
+    font-size: 1.25rem; /* ~20px */
+    font-weight: 700;
+  }
+  
+  .card__text {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .card__text--highlight {
+    color: rgb(158, 0, 0);
+    font-weight: 600;
+  }
+  
+  /* === Преимущества === */
+  .features__list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .features__item {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* === Отзыв === */
+  .review__text {
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #1c1c21;
+  }
+  
+  /* === Контакты === */
+  .contacts__list {
+    margin: 0;
+  }
+  
+  .contacts__row {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contacts__link {
+    color: #1c1c21;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contacts__link:hover {
+    text-decoration: underline;
+  }
+  
+  .contacts__link:focus-visible {
+    outline: 3px solid #3b57d4;
+    outline-offset: 2px;
+  }
